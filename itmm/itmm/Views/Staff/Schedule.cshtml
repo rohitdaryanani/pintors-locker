@@ -66,13 +66,14 @@
 	}   
    </select>
     </div>
+
      <div class="editor-label">
             @Html.LabelFor(model => model.AvailableTable)
      </div>
      <div class="editor-field">
             @Html.EditorFor(model => model.AvailableTable)
             @Html.ValidationMessageFor(model => model.AvailableTable)
-        </div>
+     </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Instructor)
@@ -88,9 +89,9 @@
 </div><!--first_div-->
 }
 </div><!--zero_div-->
-
+ </div><!--content_wrapper-->
  <div id="dataTable">
-<table id="dtable" cellspacing="0">
+ <table id="dtable" cellspacing="0">
     <thead>
         <tr>
             <th>Group No</th>
@@ -117,10 +118,9 @@
             <td>@x.Room</td>
             <td>@x.Instructor</td>
             <td>
-            @Html.ActionLink("students", "ClassStudents", "Staff", new { SkedId = x.ClassId }, null)
-            @Html.ActionLink("edit", "EditSked", "Staff", new { SkedId = x.ClassId }, null)
-            @Html.ActionLink("delete", "DeleteSked", "Staff", new { SkedId = x.ClassId }, null)
-
+            @Html.ActionLink("[Tables]", "AssignStudentsToTables", "Staff", new { SkedId = x.ClassId }, null)
+            @Html.ActionLink("[Edit]", "EditSked", "Staff", new { SkedId = x.ClassId }, null)
+            @Html.ActionLink("[Delete]", "DeleteSked", "Staff", new { SkedId = x.ClassId }, null)
             </td>
         </tr>
        }
@@ -128,7 +128,7 @@
     </tbody>
 </table>
  </div><!--dataTable-->
- </div><!--content_wrapper-->
+
 @section SideNav{
 <ul>
     <li>@Html.ActionLink("Home", "Index", "Staff")</li>

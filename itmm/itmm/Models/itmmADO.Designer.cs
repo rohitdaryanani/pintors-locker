@@ -28,13 +28,13 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("pintorModel", "FK__aspnet_Pe__UserI__2DE6D218", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(itmm.Models.aspnet_Users), "aspnet_PersonalizationPerUser", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.aspnet_PersonalizationPerUser), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "FK__aspnet_Pr__UserI__7D439ABD", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.aspnet_Users), "aspnet_Profile", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(itmm.Models.aspnet_Profile), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "FK_Class_Laboratory", "Laboratory", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.Laboratory), "Class", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Class), true)]
-[assembly: EdmRelationshipAttribute("pintorModel", "FK_Group_Class", "Class", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(itmm.Models.Class), "Table", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Table), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "FK_Dispense_Equipment", "Equipment", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(itmm.Models.Equipment), "Dispense", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Dispense), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "FK_Dispense_Room", "Room", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(itmm.Models.Room), "Dispense", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Dispense), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "FK_Dispense_Table", "Table", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(itmm.Models.Table), "Dispense", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Dispense), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "FK_Laboratory_Equipment_Equipment", "Equipment", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.Equipment), "Laboratory_Equipment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Laboratory_Equipment), true)]
-[assembly: EdmRelationshipAttribute("pintorModel", "FK_Income_Laboratory", "Laboratory", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(itmm.Models.Laboratory), "Income", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Income), true)]
-[assembly: EdmRelationshipAttribute("pintorModel", "FK_Income_StudentInfo1", "StudentInfo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(itmm.Models.StudentInfo), "Income", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Income), true)]
+[assembly: EdmRelationshipAttribute("pintorModel", "FK_Expenses_Expenses", "Laboratory", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.Laboratory), "Expens", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Expens), true)]
+[assembly: EdmRelationshipAttribute("pintorModel", "FK_Income_Laboratory", "Laboratory", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.Laboratory), "Income", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Income), true)]
+[assembly: EdmRelationshipAttribute("pintorModel", "FK_Income_StudentInfo", "StudentInfo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.StudentInfo), "Income", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Income), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "FK_Laboratory_Equipment_Laboratory", "Laboratory", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.Laboratory), "Laboratory_Equipment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Laboratory_Equipment), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "FK_Laboratory_Head_Laboratory", "Laboratory", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.Laboratory), "Laboratory_Head", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Laboratory_Head), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "FK_Laboratory_Material_Laboratory", "Laboratory", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.Laboratory), "Laboratory_Material", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Laboratory_Material), true)]
@@ -45,7 +45,6 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("pintorModel", "FK_Laboratory_Material_Material", "Material", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.Material), "Laboratory_Material", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Laboratory_Material), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "FK_Laboratory_Room_Room", "Room", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.Room), "Laboratory_Room", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Laboratory_Room), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "FK_Liability_StudentInfo", "StudentInfo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(itmm.Models.StudentInfo), "Liability", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Liability), true)]
-[assembly: EdmRelationshipAttribute("pintorModel", "FK_Group_StudentInfo", "StudentInfo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(itmm.Models.StudentInfo), "Table", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.Table), true)]
 [assembly: EdmRelationshipAttribute("pintorModel", "aspnet_UsersInRoles", "aspnet_Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.aspnet_Roles), "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(itmm.Models.aspnet_Users))]
 
 #endregion
@@ -321,6 +320,22 @@ namespace itmm.Models
             }
         }
         private ObjectSet<Event> _Events;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Expens> Expenses
+        {
+            get
+            {
+                if ((_Expenses == null))
+                {
+                    _Expenses = base.CreateObjectSet<Expens>("Expenses");
+                }
+                return _Expenses;
+            }
+        }
+        private ObjectSet<Expens> _Expenses;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -675,6 +690,14 @@ namespace itmm.Models
         public void AddToEvents(Event @event)
         {
             base.AddObject("Events", @event);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Expenses EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToExpenses(Expens expens)
+        {
+            base.AddObject("Expenses", expens);
         }
     
         /// <summary>
@@ -3686,6 +3709,30 @@ namespace itmm.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> AvailableTable
+        {
+            get
+            {
+                return _AvailableTable;
+            }
+            set
+            {
+                OnAvailableTableChanging(value);
+                ReportPropertyChanging("AvailableTable");
+                _AvailableTable = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("AvailableTable");
+                OnAvailableTableChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _AvailableTable;
+        partial void OnAvailableTableChanging(Nullable<global::System.Int32> value);
+        partial void OnAvailableTableChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String CourseCode
@@ -3850,30 +3897,6 @@ namespace itmm.Models
         private global::System.Int32 _LabId;
         partial void OnLabIdChanging(global::System.Int32 value);
         partial void OnLabIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> AvailableTable
-        {
-            get
-            {
-                return _AvailableTable;
-            }
-            set
-            {
-                OnAvailableTableChanging(value);
-                ReportPropertyChanging("AvailableTable");
-                _AvailableTable = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("AvailableTable");
-                OnAvailableTableChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _AvailableTable;
-        partial void OnAvailableTableChanging(Nullable<global::System.Int32> value);
-        partial void OnAvailableTableChanged();
 
         #endregion
     
@@ -3913,28 +3936,6 @@ namespace itmm.Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Laboratory>("pintorModel.FK_Class_Laboratory", "Laboratory", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("pintorModel", "FK_Group_Class", "Table")]
-        public EntityCollection<Table> Tables
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Table>("pintorModel.FK_Group_Class", "Table");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Table>("pintorModel.FK_Group_Class", "Table", value);
                 }
             }
         }
@@ -4112,6 +4113,30 @@ namespace itmm.Models
         private global::System.String _Status;
         partial void OnStatusChanging(global::System.String value);
         partial void OnStatusChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> ClassId
+        {
+            get
+            {
+                return _ClassId;
+            }
+            set
+            {
+                OnClassIdChanging(value);
+                ReportPropertyChanging("ClassId");
+                _ClassId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ClassId");
+                OnClassIdChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _ClassId;
+        partial void OnClassIdChanging(Nullable<global::System.Int32> value);
+        partial void OnClassIdChanged();
 
         #endregion
     
@@ -4722,6 +4747,232 @@ namespace itmm.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="pintorModel", Name="Expens")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Expens : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Expens object.
+        /// </summary>
+        /// <param name="expensesId">Initial value of the ExpensesId property.</param>
+        /// <param name="laboratoryId">Initial value of the LaboratoryId property.</param>
+        /// <param name="expensesTransaction">Initial value of the ExpensesTransaction property.</param>
+        /// <param name="expensesCost">Initial value of the ExpensesCost property.</param>
+        /// <param name="dateCreated">Initial value of the DateCreated property.</param>
+        /// <param name="expensesDetail">Initial value of the ExpensesDetail property.</param>
+        public static Expens CreateExpens(global::System.Int32 expensesId, global::System.Int32 laboratoryId, global::System.String expensesTransaction, global::System.Int32 expensesCost, global::System.DateTime dateCreated, global::System.String expensesDetail)
+        {
+            Expens expens = new Expens();
+            expens.ExpensesId = expensesId;
+            expens.LaboratoryId = laboratoryId;
+            expens.ExpensesTransaction = expensesTransaction;
+            expens.ExpensesCost = expensesCost;
+            expens.DateCreated = dateCreated;
+            expens.ExpensesDetail = expensesDetail;
+            return expens;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ExpensesId
+        {
+            get
+            {
+                return _ExpensesId;
+            }
+            set
+            {
+                if (_ExpensesId != value)
+                {
+                    OnExpensesIdChanging(value);
+                    ReportPropertyChanging("ExpensesId");
+                    _ExpensesId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ExpensesId");
+                    OnExpensesIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ExpensesId;
+        partial void OnExpensesIdChanging(global::System.Int32 value);
+        partial void OnExpensesIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 LaboratoryId
+        {
+            get
+            {
+                return _LaboratoryId;
+            }
+            set
+            {
+                OnLaboratoryIdChanging(value);
+                ReportPropertyChanging("LaboratoryId");
+                _LaboratoryId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LaboratoryId");
+                OnLaboratoryIdChanged();
+            }
+        }
+        private global::System.Int32 _LaboratoryId;
+        partial void OnLaboratoryIdChanging(global::System.Int32 value);
+        partial void OnLaboratoryIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ExpensesTransaction
+        {
+            get
+            {
+                return _ExpensesTransaction;
+            }
+            set
+            {
+                OnExpensesTransactionChanging(value);
+                ReportPropertyChanging("ExpensesTransaction");
+                _ExpensesTransaction = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("ExpensesTransaction");
+                OnExpensesTransactionChanged();
+            }
+        }
+        private global::System.String _ExpensesTransaction;
+        partial void OnExpensesTransactionChanging(global::System.String value);
+        partial void OnExpensesTransactionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ExpensesCost
+        {
+            get
+            {
+                return _ExpensesCost;
+            }
+            set
+            {
+                OnExpensesCostChanging(value);
+                ReportPropertyChanging("ExpensesCost");
+                _ExpensesCost = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ExpensesCost");
+                OnExpensesCostChanged();
+            }
+        }
+        private global::System.Int32 _ExpensesCost;
+        partial void OnExpensesCostChanging(global::System.Int32 value);
+        partial void OnExpensesCostChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime DateCreated
+        {
+            get
+            {
+                return _DateCreated;
+            }
+            set
+            {
+                OnDateCreatedChanging(value);
+                ReportPropertyChanging("DateCreated");
+                _DateCreated = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DateCreated");
+                OnDateCreatedChanged();
+            }
+        }
+        private global::System.DateTime _DateCreated;
+        partial void OnDateCreatedChanging(global::System.DateTime value);
+        partial void OnDateCreatedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ExpensesDetail
+        {
+            get
+            {
+                return _ExpensesDetail;
+            }
+            set
+            {
+                OnExpensesDetailChanging(value);
+                ReportPropertyChanging("ExpensesDetail");
+                _ExpensesDetail = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("ExpensesDetail");
+                OnExpensesDetailChanged();
+            }
+        }
+        private global::System.String _ExpensesDetail;
+        partial void OnExpensesDetailChanging(global::System.String value);
+        partial void OnExpensesDetailChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("pintorModel", "FK_Expenses_Expenses", "Laboratory")]
+        public Laboratory Laboratory
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Laboratory>("pintorModel.FK_Expenses_Expenses", "Laboratory").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Laboratory>("pintorModel.FK_Expenses_Expenses", "Laboratory").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Laboratory> LaboratoryReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Laboratory>("pintorModel.FK_Expenses_Expenses", "Laboratory");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Laboratory>("pintorModel.FK_Expenses_Expenses", "Laboratory", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="pintorModel", Name="Income")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -4733,10 +4984,20 @@ namespace itmm.Models
         /// Create a new Income object.
         /// </summary>
         /// <param name="incomeId">Initial value of the IncomeId property.</param>
-        public static Income CreateIncome(global::System.Int32 incomeId)
+        /// <param name="laboratoryId">Initial value of the LaboratoryId property.</param>
+        /// <param name="studentInfoId">Initial value of the StudentInfoId property.</param>
+        /// <param name="transactionn">Initial value of the Transactionn property.</param>
+        /// <param name="cost">Initial value of the cost property.</param>
+        /// <param name="dateCreated">Initial value of the DateCreated property.</param>
+        public static Income CreateIncome(global::System.Int32 incomeId, global::System.Int32 laboratoryId, global::System.Int32 studentInfoId, global::System.String transactionn, global::System.Int32 cost, global::System.DateTime dateCreated)
         {
             Income income = new Income();
             income.IncomeId = incomeId;
+            income.LaboratoryId = laboratoryId;
+            income.StudentInfoId = studentInfoId;
+            income.Transactionn = transactionn;
+            income.cost = cost;
+            income.DateCreated = dateCreated;
             return income;
         }
 
@@ -4773,9 +5034,9 @@ namespace itmm.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> LaboratoryId
+        public global::System.Int32 LaboratoryId
         {
             get
             {
@@ -4790,38 +5051,38 @@ namespace itmm.Models
                 OnLaboratoryIdChanged();
             }
         }
-        private Nullable<global::System.Int32> _LaboratoryId;
-        partial void OnLaboratoryIdChanging(Nullable<global::System.Int32> value);
+        private global::System.Int32 _LaboratoryId;
+        partial void OnLaboratoryIdChanging(global::System.Int32 value);
         partial void OnLaboratoryIdChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> StudentId
+        public global::System.Int32 StudentInfoId
         {
             get
             {
-                return _StudentId;
+                return _StudentInfoId;
             }
             set
             {
-                OnStudentIdChanging(value);
-                ReportPropertyChanging("StudentId");
-                _StudentId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("StudentId");
-                OnStudentIdChanged();
+                OnStudentInfoIdChanging(value);
+                ReportPropertyChanging("StudentInfoId");
+                _StudentInfoId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("StudentInfoId");
+                OnStudentInfoIdChanged();
             }
         }
-        private Nullable<global::System.Int32> _StudentId;
-        partial void OnStudentIdChanging(Nullable<global::System.Int32> value);
-        partial void OnStudentIdChanged();
+        private global::System.Int32 _StudentInfoId;
+        partial void OnStudentInfoIdChanging(global::System.Int32 value);
+        partial void OnStudentInfoIdChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Transactionn
         {
@@ -4833,7 +5094,7 @@ namespace itmm.Models
             {
                 OnTransactionnChanging(value);
                 ReportPropertyChanging("Transactionn");
-                _Transactionn = StructuralObject.SetValidValue(value, true);
+                _Transactionn = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Transactionn");
                 OnTransactionnChanged();
             }
@@ -4845,9 +5106,9 @@ namespace itmm.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> cost
+        public global::System.Int32 cost
         {
             get
             {
@@ -4862,9 +5123,33 @@ namespace itmm.Models
                 OncostChanged();
             }
         }
-        private Nullable<global::System.Int32> _cost;
-        partial void OncostChanging(Nullable<global::System.Int32> value);
+        private global::System.Int32 _cost;
+        partial void OncostChanging(global::System.Int32 value);
         partial void OncostChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime DateCreated
+        {
+            get
+            {
+                return _DateCreated;
+            }
+            set
+            {
+                OnDateCreatedChanging(value);
+                ReportPropertyChanging("DateCreated");
+                _DateCreated = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DateCreated");
+                OnDateCreatedChanged();
+            }
+        }
+        private global::System.DateTime _DateCreated;
+        partial void OnDateCreatedChanging(global::System.DateTime value);
+        partial void OnDateCreatedChanged();
 
         #endregion
     
@@ -4914,16 +5199,16 @@ namespace itmm.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("pintorModel", "FK_Income_StudentInfo1", "StudentInfo")]
+        [EdmRelationshipNavigationPropertyAttribute("pintorModel", "FK_Income_StudentInfo", "StudentInfo")]
         public StudentInfo StudentInfo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StudentInfo>("pintorModel.FK_Income_StudentInfo1", "StudentInfo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StudentInfo>("pintorModel.FK_Income_StudentInfo", "StudentInfo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StudentInfo>("pintorModel.FK_Income_StudentInfo1", "StudentInfo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StudentInfo>("pintorModel.FK_Income_StudentInfo", "StudentInfo").Value = value;
             }
         }
         /// <summary>
@@ -4935,13 +5220,13 @@ namespace itmm.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StudentInfo>("pintorModel.FK_Income_StudentInfo1", "StudentInfo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StudentInfo>("pintorModel.FK_Income_StudentInfo", "StudentInfo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<StudentInfo>("pintorModel.FK_Income_StudentInfo1", "StudentInfo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<StudentInfo>("pintorModel.FK_Income_StudentInfo", "StudentInfo", value);
                 }
             }
         }
@@ -5200,6 +5485,30 @@ namespace itmm.Models
         private global::System.String _UserName;
         partial void OnUserNameChanging(global::System.String value);
         partial void OnUserNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String LaboratoryContact
+        {
+            get
+            {
+                return _LaboratoryContact;
+            }
+            set
+            {
+                OnLaboratoryContactChanging(value);
+                ReportPropertyChanging("LaboratoryContact");
+                _LaboratoryContact = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("LaboratoryContact");
+                OnLaboratoryContactChanged();
+            }
+        }
+        private global::System.String _LaboratoryContact;
+        partial void OnLaboratoryContactChanging(global::System.String value);
+        partial void OnLaboratoryContactChanged();
 
         #endregion
     
@@ -5223,6 +5532,28 @@ namespace itmm.Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Class>("pintorModel.FK_Class_Laboratory", "Class", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("pintorModel", "FK_Expenses_Expenses", "Expens")]
+        public EntityCollection<Expens> Expenses
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Expens>("pintorModel.FK_Expenses_Expenses", "Expens");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Expens>("pintorModel.FK_Expenses_Expenses", "Expens", value);
                 }
             }
         }
@@ -5508,6 +5839,30 @@ namespace itmm.Models
         private global::System.Int32 _EquipmentId;
         partial void OnEquipmentIdChanging(global::System.Int32 value);
         partial void OnEquipmentIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Borrowed
+        {
+            get
+            {
+                return _Borrowed;
+            }
+            set
+            {
+                OnBorrowedChanging(value);
+                ReportPropertyChanging("Borrowed");
+                _Borrowed = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Borrowed");
+                OnBorrowedChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Borrowed;
+        partial void OnBorrowedChanging(Nullable<global::System.Int32> value);
+        partial void OnBorrowedChanged();
 
         #endregion
     
@@ -6534,16 +6889,16 @@ namespace itmm.Models
         /// Create a new Liability object.
         /// </summary>
         /// <param name="liabilityId">Initial value of the LiabilityId property.</param>
-        /// <param name="studentId">Initial value of the StudentId property.</param>
+        /// <param name="studenInfotId">Initial value of the StudenInfotId property.</param>
         /// <param name="equipment">Initial value of the Equipment property.</param>
         /// <param name="fine">Initial value of the Fine property.</param>
         /// <param name="status">Initial value of the Status property.</param>
         /// <param name="laboratoryId">Initial value of the LaboratoryId property.</param>
-        public static Liability CreateLiability(global::System.Int32 liabilityId, global::System.Int32 studentId, global::System.String equipment, global::System.Int32 fine, global::System.String status, global::System.Int32 laboratoryId)
+        public static Liability CreateLiability(global::System.Int32 liabilityId, global::System.Int32 studenInfotId, global::System.String equipment, global::System.String fine, global::System.String status, global::System.Int32 laboratoryId)
         {
             Liability liability = new Liability();
             liability.LiabilityId = liabilityId;
-            liability.StudentId = studentId;
+            liability.StudenInfotId = studenInfotId;
             liability.Equipment = equipment;
             liability.Fine = fine;
             liability.Status = status;
@@ -6586,24 +6941,24 @@ namespace itmm.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 StudentId
+        public global::System.Int32 StudenInfotId
         {
             get
             {
-                return _StudentId;
+                return _StudenInfotId;
             }
             set
             {
-                OnStudentIdChanging(value);
-                ReportPropertyChanging("StudentId");
-                _StudentId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("StudentId");
-                OnStudentIdChanged();
+                OnStudenInfotIdChanging(value);
+                ReportPropertyChanging("StudenInfotId");
+                _StudenInfotId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("StudenInfotId");
+                OnStudenInfotIdChanged();
             }
         }
-        private global::System.Int32 _StudentId;
-        partial void OnStudentIdChanging(global::System.Int32 value);
-        partial void OnStudentIdChanged();
+        private global::System.Int32 _StudenInfotId;
+        partial void OnStudenInfotIdChanging(global::System.Int32 value);
+        partial void OnStudenInfotIdChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6634,7 +6989,7 @@ namespace itmm.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Fine
+        public global::System.String Fine
         {
             get
             {
@@ -6644,13 +6999,13 @@ namespace itmm.Models
             {
                 OnFineChanging(value);
                 ReportPropertyChanging("Fine");
-                _Fine = StructuralObject.SetValidValue(value);
+                _Fine = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Fine");
                 OnFineChanged();
             }
         }
-        private global::System.Int32 _Fine;
-        partial void OnFineChanging(global::System.Int32 value);
+        private global::System.String _Fine;
+        partial void OnFineChanging(global::System.String value);
         partial void OnFineChanged();
     
         /// <summary>
@@ -7362,16 +7717,16 @@ namespace itmm.Models
         /// <param name="studentId">Initial value of the StudentId property.</param>
         /// <param name="familiyName">Initial value of the FamiliyName property.</param>
         /// <param name="firstName">Initial value of the FirstName property.</param>
-        /// <param name="idNumber">Initial value of the IdNumber property.</param>
         /// <param name="courseAndYear">Initial value of the CourseAndYear property.</param>
-        public static StudentInfo CreateStudentInfo(global::System.Int32 studentId, global::System.String familiyName, global::System.String firstName, global::System.Int32 idNumber, global::System.String courseAndYear)
+        /// <param name="studentInfoId">Initial value of the StudentInfoId property.</param>
+        public static StudentInfo CreateStudentInfo(global::System.String studentId, global::System.String familiyName, global::System.String firstName, global::System.String courseAndYear, global::System.Int32 studentInfoId)
         {
             StudentInfo studentInfo = new StudentInfo();
             studentInfo.StudentId = studentId;
             studentInfo.FamiliyName = familiyName;
             studentInfo.FirstName = firstName;
-            studentInfo.IdNumber = idNumber;
             studentInfo.CourseAndYear = courseAndYear;
+            studentInfo.StudentInfoId = studentInfoId;
             return studentInfo;
         }
 
@@ -7381,9 +7736,9 @@ namespace itmm.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 StudentId
+        public global::System.String StudentId
         {
             get
             {
@@ -7391,18 +7746,15 @@ namespace itmm.Models
             }
             set
             {
-                if (_StudentId != value)
-                {
-                    OnStudentIdChanging(value);
-                    ReportPropertyChanging("StudentId");
-                    _StudentId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("StudentId");
-                    OnStudentIdChanged();
-                }
+                OnStudentIdChanging(value);
+                ReportPropertyChanging("StudentId");
+                _StudentId = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("StudentId");
+                OnStudentIdChanged();
             }
         }
-        private global::System.Int32 _StudentId;
-        partial void OnStudentIdChanging(global::System.Int32 value);
+        private global::System.String _StudentId;
+        partial void OnStudentIdChanging(global::System.String value);
         partial void OnStudentIdChanged();
     
         /// <summary>
@@ -7458,30 +7810,6 @@ namespace itmm.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdNumber
-        {
-            get
-            {
-                return _IdNumber;
-            }
-            set
-            {
-                OnIdNumberChanging(value);
-                ReportPropertyChanging("IdNumber");
-                _IdNumber = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdNumber");
-                OnIdNumberChanged();
-            }
-        }
-        private global::System.Int32 _IdNumber;
-        partial void OnIdNumberChanging(global::System.Int32 value);
-        partial void OnIdNumberChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.String CourseAndYear
         {
             get
@@ -7500,6 +7828,57 @@ namespace itmm.Models
         private global::System.String _CourseAndYear;
         partial void OnCourseAndYearChanging(global::System.String value);
         partial void OnCourseAndYearChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> LaboratoryId
+        {
+            get
+            {
+                return _LaboratoryId;
+            }
+            set
+            {
+                OnLaboratoryIdChanging(value);
+                ReportPropertyChanging("LaboratoryId");
+                _LaboratoryId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LaboratoryId");
+                OnLaboratoryIdChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _LaboratoryId;
+        partial void OnLaboratoryIdChanging(Nullable<global::System.Int32> value);
+        partial void OnLaboratoryIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 StudentInfoId
+        {
+            get
+            {
+                return _StudentInfoId;
+            }
+            set
+            {
+                if (_StudentInfoId != value)
+                {
+                    OnStudentInfoIdChanging(value);
+                    ReportPropertyChanging("StudentInfoId");
+                    _StudentInfoId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("StudentInfoId");
+                    OnStudentInfoIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _StudentInfoId;
+        partial void OnStudentInfoIdChanging(global::System.Int32 value);
+        partial void OnStudentInfoIdChanged();
 
         #endregion
     
@@ -7511,18 +7890,18 @@ namespace itmm.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("pintorModel", "FK_Income_StudentInfo1", "Income")]
+        [EdmRelationshipNavigationPropertyAttribute("pintorModel", "FK_Income_StudentInfo", "Income")]
         public EntityCollection<Income> Incomes
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Income>("pintorModel.FK_Income_StudentInfo1", "Income");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Income>("pintorModel.FK_Income_StudentInfo", "Income");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Income>("pintorModel.FK_Income_StudentInfo1", "Income", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Income>("pintorModel.FK_Income_StudentInfo", "Income", value);
                 }
             }
         }
@@ -7545,28 +7924,6 @@ namespace itmm.Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Liability>("pintorModel.FK_Liability_StudentInfo", "Liability", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("pintorModel", "FK_Group_StudentInfo", "Table")]
-        public EntityCollection<Table> Tables
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Table>("pintorModel.FK_Group_StudentInfo", "Table");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Table>("pintorModel.FK_Group_StudentInfo", "Table", value);
                 }
             }
         }
@@ -7809,7 +8166,7 @@ namespace itmm.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> StudentId
+        public global::System.String StudentId
         {
             get
             {
@@ -7819,13 +8176,13 @@ namespace itmm.Models
             {
                 OnStudentIdChanging(value);
                 ReportPropertyChanging("StudentId");
-                _StudentId = StructuralObject.SetValidValue(value);
+                _StudentId = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("StudentId");
                 OnStudentIdChanged();
             }
         }
-        private Nullable<global::System.Int32> _StudentId;
-        partial void OnStudentIdChanging(Nullable<global::System.Int32> value);
+        private global::System.String _StudentId;
+        partial void OnStudentIdChanging(global::System.String value);
         partial void OnStudentIdChanged();
     
         /// <summary>
@@ -7862,44 +8219,6 @@ namespace itmm.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("pintorModel", "FK_Group_Class", "Class")]
-        public Class Class
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Class>("pintorModel.FK_Group_Class", "Class").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Class>("pintorModel.FK_Group_Class", "Class").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Class> ClassReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Class>("pintorModel.FK_Group_Class", "Class");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Class>("pintorModel.FK_Group_Class", "Class", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("pintorModel", "FK_Dispense_Table", "Dispense")]
         public EntityCollection<Dispense> Dispenses
         {
@@ -7912,44 +8231,6 @@ namespace itmm.Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Dispense>("pintorModel.FK_Dispense_Table", "Dispense", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("pintorModel", "FK_Group_StudentInfo", "StudentInfo")]
-        public StudentInfo StudentInfo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StudentInfo>("pintorModel.FK_Group_StudentInfo", "StudentInfo").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StudentInfo>("pintorModel.FK_Group_StudentInfo", "StudentInfo").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<StudentInfo> StudentInfoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StudentInfo>("pintorModel.FK_Group_StudentInfo", "StudentInfo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<StudentInfo>("pintorModel.FK_Group_StudentInfo", "StudentInfo", value);
                 }
             }
         }

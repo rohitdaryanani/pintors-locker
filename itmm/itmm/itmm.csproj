@@ -215,6 +215,7 @@
     <Content Include="Views\Admin\Head.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Content\images\Sorting icons.psd" />
     <Content Include="Views\Admin\EditHead.cshtml" />
     <Content Include="Views\Head\Index.cshtml" />
@@ -238,7 +239,17 @@
     <Content Include="Views\Staff\EditLiability.cshtml" />
     <Content Include="Views\Staff\Income.cshtml" />
     <Content Include="Views\Staff\EditIncome.cshtml" />
-    <Content Include="Views\Staff\ClassStudents.cshtml" />
+    <Content Include="Views\Staff\MaterialQuantityChecker.cshtml" />
+    <Content Include="Views\Staff\AssignStudentsToTables.cshtml" />
+    <Content Include="Views\Staff\AddStudentsToTables.cshtml" />
+    <Content Include="Views\Staff\EditStudentsToTables.cshtml" />
+    <Content Include="Views\Staff\Dispense.cshtml" />
+    <Content Include="Views\Staff\GetClassTables.cshtml" />
+    <Content Include="Views\Staff\DispenseEquipment.cshtml" />
+    <Content Include="Views\Staff\ViewEquipment.cshtml" />
+    <Content Include="Views\Staff\Expenses.cshtml" />
+    <Content Include="Views\Staff\EditExpenses.cshtml" />
+    <Content Include="Views\Head\HeadReports.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -258,7 +269,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1519</DevelopmentServerPort>
+          <DevelopmentServerPort>7872</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

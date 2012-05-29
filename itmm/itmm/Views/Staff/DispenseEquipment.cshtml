@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "DispenseEquipment";
+    Layout = "~/Views/Shared/itmm/_itmmLayout.cshtml";
+    var Equipment = (ViewBag.Equipment as IQueryable<itmm.Models.Equipment>);
+}
+<div>
+<form id="dispense_form" method="post" action="../Staff/DispenseFinal" >
+    Select Equipment:
+    <select id="Equip" name="EquipmentId">
+    @foreach (var x in Equipment)
+    {
+        <option value="@x.EquipmentId">@x.Make [@x.Barcode]</option>
+        
+    }
+    </select>
+   
+    <input type="submit" value="Ok" />
+</form>
+</div><br />
+<div id="content_wrapper">
+    <span>Equipment(s) to Dispense:</span>
+    <form id="dispense_list" method="post" action="test.html">
+    <input type="hidden" name="TableId" value="@ViewBag.TableId" />
+    <input type="hidden" name="ClassId" value="@ViewBag.ClassId" />
+
+    <div id="equipment_list"><ul></ul></div><br />
+
+    <div id="form_buttons" style="display:none;">
+        <input id="reset" type="button" value="Reset" />
+        <input type="submit" value="Go" />
+    </div>
+    </form>
+</div>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Dispense")
+</div>
+
+<script type="text/javascript">
+    $(document).ready(
+        function () {
+            $("#dispense_form").submit(
+            function () {
+                var value = $("#Equip").val();
+                var EquipmentName = $("#Equip option:selected").html();
+
+                var input = "<div><li><input type='hidden' name='EquipmentId' value='" + value + "'/>" + EquipmentName + "</li></div>";
+                $("#Equip option:selected").remove();
+                // alert(input);
+                if (EquipmentName != null) {
+                    
+                    $("#equipment_list > ul").append(input);
+                } else {
+                    alert("No item to dispense!");
+                }
+                $("#form_buttons").css("display", "block");
+                return false;
+            }
+            );
+            //FORM buttons
+            $("#reset").click(
+            function () {
+                location.reload();
+            }
+         );
+
+            $("#dispense_list").submit(
+            function () {
+                //alert("lll");
+                var parameter = $(this).serialize();
+                var url = "../Staff/DispenseFinal";
+                $.post(url, parameter,
+                            function () {
+                                alert("Equipment(s) Dispensed!");
+                                location.replace("../Staff/Dispense");
+                            });
+                return false;
+            }
+         );
+
+
+
+        }
+    );
+</script>
+
+

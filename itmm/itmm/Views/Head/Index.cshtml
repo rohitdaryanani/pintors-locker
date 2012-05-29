@@ -15,13 +15,10 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
-        // $("#light").addClass("light").css("color", "#F7BE81");
-        // $("#dtable").dataTable();
         var cnt = $("#notices > div").length;
         if (cnt != 0) {
-            $.gritter.add({
-               
-                title: "Heads up!..(0_0)",
+            $.gritter.add({               
+                title: "Events today:",
                
                 text: "It seems that there is an event today,for more info please go the Notification Menu",
                 
@@ -37,6 +34,7 @@
     <li>@Html.ActionLink("Material", "Material", "Head")</li>
     <li>@Html.ActionLink("Equipment", "Equipment", "Head")</li>
     <li>@Html.ActionLink("Notification", "Notification", "Head")</li>
+    <li>@Html.ActionLink("Reports", "HeadReports", "Head")</li>
 </ul>
 }
 

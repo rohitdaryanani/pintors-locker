@@ -221,8 +221,10 @@ namespace itmm.Controllers
         {
             return RedirectToAction("Error");
         }
-        var x = from y in con.Equipments
-                select y;
+        var labid = getLabId();
+        var x = from y in con.Laboratory_Equipment
+                where y.LaboratoryId == labid
+                select y.Equipment;
         ViewBag.EquipList = x;
         return View();
     }
@@ -393,6 +395,54 @@ namespace itmm.Controllers
       con.SaveChanges();
 
       return RedirectToAction("Notification", "Head");
+  }
+
+  [Authorize(Roles = "Head")]
+  public ActionResult HeadReports()
+  {
+      var labid = getLabId();
+      var PresentYear = DateTime.Now.Year;
+
+
+      //.Sum() throws an error when there is no data to sum up;
+      try{
+            ViewBag.Income = (from y in con.Incomes
+              where y.LaboratoryId == labid && y.DateCreated.Year == PresentYear
+              select y.cost).Sum();
+
+       }catch(Exception e){
+           ViewBag.Income = 0;
+       }
+
+      //get datatable summary income details for the current year
+      ViewBag.IncomeList = from y in con.Incomes
+                          where y.LaboratoryId == labid
+                          select y;
+
+
+      //.Sum() throws an error when there is no data to sum up;
+      try
+      {
+          ViewBag.Expenses = (from y in con.Expenses
+                            where y.LaboratoryId == labid && y.DateCreated.Year == PresentYear
+                            select y.ExpensesCost).Sum();
+
+      }
+      catch (Exception e)
+      {
+          ViewBag.Expenses = 0;
+      }
+
+
+     ViewBag.ExpensesList = from y in con.Expenses
+                            where y.LaboratoryId == labid && y.DateCreated.Year == PresentYear
+                           select y;
+
+     ViewBag.TotalIncome = ViewBag.Income - ViewBag.Expenses;
+
+
+
+      return View();
   }
 
 

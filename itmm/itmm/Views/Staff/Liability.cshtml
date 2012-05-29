@@ -6,7 +6,7 @@
     var LList = (ViewBag.LList as IQueryable<itmm.Models.Liability>);
 }
 
-<h2>Liability</h2>
+
 
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
@@ -16,21 +16,21 @@
     @Html.ValidationSummary(true)
 
 <div id="first_div">
-        <div class="editor-label">
+@*        <div class="editor-label">
             @Html.LabelFor(model => model.FamilyName)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.FamilyName)
             @Html.ValidationMessageFor(model => model.FamilyName)
-        </div>
+        </div>*@
 
-        <div class="editor-label">
+@*        <div class="editor-label">
             @Html.LabelFor(model => model.FirstName)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.FirstName)
             @Html.ValidationMessageFor(model => model.FirstName)
-        </div>
+        </div>*@
 
         <div class="editor-label">
             @Html.LabelFor(model => model.IdNumber)
@@ -40,13 +40,13 @@
             @Html.ValidationMessageFor(model => model.IdNumber)
         </div>
 
-        <div class="editor-label">
+@*        <div class="editor-label">
             @Html.LabelFor(model => model.Course)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Course)
             @Html.ValidationMessageFor(model => model.Course)
-        </div>
+        </div>*@
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Equipment)
@@ -78,6 +78,7 @@
 </div><!--first_div-->
 }
 </div><!--zero_div-->
+</div><!--content_wrapper-->
 @if (LList.Count() != 0)
 {
 <div id="dataTable">
@@ -85,9 +86,9 @@
     <thead>
         <tr>
             <th>Id Number</th>
-            <th>Family Name</th>
+@*            <th>Family Name</th>
             <th>First Name</th>
-            <th>Course&Year</th>
+            <th>Course&Year</th>*@
             <th>Equipment</th>
             <th>Fine</th>
             <th>Status</th>
@@ -98,15 +99,16 @@
        @foreach (var x in LList)
        { 
         <tr>
-            <td>@x.StudentInfoReference.Value.IdNumber</td>
+@*            <td>@x.StudentInfoReference.Value.IdNumber</td>
             <td>@x.StudentInfoReference.Value.FamiliyName</td> 
             <td>@x.StudentInfoReference.Value.FirstName</td>   
-            <td>@x.StudentInfoReference.Value.CourseAndYear</td>
+            <td>@x.StudentInfoReference.Value.CourseAndYear</td>*@
+            <td>@x.StudentInfo.StudentId</td>
             <td>@x.Equipment</td>
             <td>@x.Fine</td>
             <td>@x.Status</td>
             <td>
-            @Html.ActionLink("edit", "EditLiability", "Staff", new { LiabilityId = x.LiabilityId }, null)
+            @Html.ActionLink("[Edit]", "EditLiability", "Staff", new { LiabilityId = x.LiabilityId }, null)
            
             </td>
         </tr>
@@ -116,4 +118,21 @@
 </table>
 </div><!--dataTable-->
 }
-</div><!--content_wrapper-->
+
+@section SideNav{
+<ul>
+  
+    <li>@Html.ActionLink("Income", "Income", "Staff")</li>
+    <li>@Html.ActionLink("Expenses", "Expenses", "Staff")</li>
+    <li>@Html.ActionLink("Liability", "Liability", "Staff", null, new { id = "light" })</li>
+    <li>@Html.ActionLink("Inventory Cost", "InventoryCost", "Staff")</li>
+    <li>@Html.ActionLink("Go Back", "Index", "Staff")</li>
+    
+</ul>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#Status").attr({disabled:"disabled",value:"Unsettled"});
+    });
+</script>

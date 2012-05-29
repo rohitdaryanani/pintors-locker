@@ -11,17 +11,21 @@
 
 @ViewBag.MyMessage
 <div id="accord">
-    <span id="span_link" style="visibility: hidden;"><a id="modal_diag" href="#">Create Laboratory</a></span><br /><br />
-    <div id="modal" title="Fill the form" style="visibility: hidden; height: 0px;">
+    <span id="span_link" style="visibility: hidden;"> <a id="modal_diag" href="#" class="but ui-state-default ui-corner-all ui-button-text-only" style="color:black;padding: 1px 1px 1px 1px;"> &nbsp; Create Laboratory &nbsp; </a></span><br /><br />
+    <div id="modal" title="Create Laboratory" style="visibility: hidden; height: 0px;">
         <form id="labform" method="post" action="/Admin/Index">
         <div>
             Laboratory Name:<br />
             <input type="text" name="LabName" class="required" maxlength=13 style="width:260px;height:23px;" />
-        </div>
+        </div> <br />
         <div>
             Laboratory Description:<br />
             <textarea name="LabDesc" class="required" style="width: 528px; height: 204px;" /></textarea>
-        </div>
+        </div> <br />
+        <div>
+            Contact Number:<br />
+            <input type="text" name="LabNum" class="required" maxlength=13 style="width:260px;height:23px;" />
+        </div> <br />
         <div>
             Availabe Room:<br />
             @foreach (var room in Room)
@@ -39,13 +43,14 @@
                 <input type="checkbox" name="room" value="@room.RoomId"/>@room.RoomName<br />  
                 }             
             }
-        </div>
-        <input type="submit" class="submit" value="Create" style="width: 150px; height: 35px" />
+        </div><br />
+        <button id="button" class=" ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" style="height: 30px;"> &nbsp;&nbsp;&nbsp; + Create &nbsp;&nbsp;&nbsp;</button>
+
         </form>
     </div><!-- end dialog -->
     <div id="room_div"style="visibility: hidden">
         <table cellspacing="0" id="dtable">
-        <thead><tr><th>Laboratory</th><th>Head</th><th>Room</th><th></th></tr></thead>
+        <thead><tr><th>Laboratory</th><th>Lab Head</th><th>Room</th><th>Contact</th><th></th></tr></thead>
         <tbody>
         @foreach (var lablist in LabList)
         {
@@ -83,8 +88,11 @@
                   @head
             </td>
             <td>@RoomInLab</td>
-            <td><a href="javascript:TableTools('@Url.Action("EditLab", "Admin", new { LabId = lablist.LaboratoryId})')">edit</a>
-            &nbsp<a href="javascript:TableConfirm('@Url.Action("DeleteLab", "Admin", new { LabId = lablist.LaboratoryId})')">delete</a>&nbsp</td></tr>
+             <td>@lablist.LaboratoryContact</td>
+             
+            <td><a href="javascript:TableTools('@Url.Action("EditLab", "Admin", new { LabId = lablist.LaboratoryId})')" class="but ui-state-default ui-corner-all ui-button-text-only" style="color:black;padding: 1px 1px 1px 1px;"> &nbsp; Edit &nbsp; </a>
+            &nbsp<a  href="javascript:TableConfirm('@Url.Action("DeleteLab", "Admin", new { LabId = lablist.LaboratoryId})')" class="but ui-state-default ui-corner-all ui-button-text-only" style="color:black;padding: 1px 1px 1px 1px;"> &nbsp; Delete &nbsp; </a>&nbsp</td></tr>
+            
         }
         </tbody>
         </table>

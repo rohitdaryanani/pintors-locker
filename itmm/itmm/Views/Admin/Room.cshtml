@@ -2,15 +2,18 @@
     var RoomList = (ViewBag.RoomList as IQueryable<itmm.Models.Room>);
 }
 <div id="accord">
- <span id="span_link" style="visibility: hidden;"><a id="modal_diag" href="#">Create Room</a></span><br /><br />
+ <span id="span_link" style="visibility: hidden;"><a id="modal_diag" href="#" class="but ui-state-default ui-corner-all ui-button-text-only" style="color:black;padding: 1px 1px 1px 1px;"> &nbsp; Create Room &nbsp; </a>
+</span><br /><br />
 
- <div id="modal" title="Fill the form" style="visibility: hidden; height: 0px;">
+ <div id="modal" title="Create room" style="visibility: hidden; height: 0px;">
         <form id="labform" method="post" action="/Admin/Room">
         <div>
             Room Name:<br />
-            <input type="text" name="RoomName" class="required" maxlength=10 style="width:260px;height:23px;" />
+            <input type="text" name="RoomName" class="required" maxlength=10 style="width:260px;height:23px;" /><br /><br />
         </div>
-        <input type="submit" class="submit" value="Create" style="width: 150px; height: 35px" />
+        <button id="button" class=" ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" style="height: 30px;"> &nbsp;&nbsp;&nbsp; + Create &nbsp;&nbsp;&nbsp;</button>
+
+
         </form>
     </div><!-- end dialog -->
  <div  id="room_div">
@@ -25,8 +28,11 @@
         @foreach (var roomlist in RoomList)
         {    
         <tr><td>@roomlist.RoomName</td>
-        <td><a href="javascript:TableTools('@Url.Action("EditRoom", "Admin", new { RoomId = roomlist.RoomId})')">edit</a>                       
-        &nbsp<a href="javascript:TableConfirm('@Url.Action("DeleteRoom", "Admin", new { RoomId = roomlist.RoomId})')">delete</a>&nbsp</td></tr>
+       
+
+        <td><a id="modal_diag" href="javascript:TableTools('@Url.Action("EditRoom", "Admin", new { RoomId = roomlist.RoomId})')" class="but ui-state-default ui-corner-all ui-button-text-only" style="color:black;padding: 1px 1px 1px 1px;"> &nbsp; Edit &nbsp; </a>
+                       
+        &nbsp <a id="modal_diag" href="javascript:TableConfirm('@Url.Action("DeleteRoom", "Admin", new { RoomId = roomlist.RoomId})')" class="but ui-state-default ui-corner-all ui-button-text-only" style="color:black;padding: 1px 1px 1px 1px;"> &nbsp; Delete &nbsp; </a>&nbsp</td></tr>
         }
         </tbody>
 </table>

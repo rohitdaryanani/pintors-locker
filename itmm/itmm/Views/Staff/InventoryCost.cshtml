@@ -6,8 +6,12 @@
 
 
 
-<div id="content_wrapper">
-@if (MatList.Count() != 0) { 
+
+@if (MatList.Count() != 0) {
+<div id="content_wrapper"> 
+<input id="btn_qty" type="button" value="check" />
+<div id="QuantityNotification"></div>
+</div><!--content_wrapper-->
 <div id="dataTable">
 <table id="dtable" cellspacing="0">
     <thead>
@@ -29,8 +33,8 @@
             <td>@x.Quantity</td>
             <td>@x.DateUpdated</td>
                         <td>
-            @Html.ActionLink("edit", "EditMaterial", "Staff", new { MatId= x.MaterialId }, null)
-            @Html.ActionLink("delete", "DeleteMaterial", "Staff", new { MatId = x.MaterialId }, null)
+            @Html.ActionLink("[Edit]", "EditMaterial", "Staff", new { MatId = x.MaterialId }, null)
+            @Html.ActionLink("[Delete]", "DeleteMaterial", "Staff", new { MatId = x.MaterialId }, null)
             </td>
 
         </tr>
@@ -39,15 +43,21 @@
     </tbody>
 </table>
 </div><!--dataTable-->
-    }
-</div><!--content_wrapper-->
+}
+
+
+
+
+
 
 @section SideNav{
 <ul>
   
     <li>@Html.ActionLink("Income", "Income", "Staff")</li>
+    <li>@Html.ActionLink("Expenses", "Expenses", "Staff")</li>
     <li>@Html.ActionLink("Liability", "Liability", "Staff")</li>
     <li>@Html.ActionLink("Inventory Cost", "InventoryCost", "Staff", null, new { id="light"})</li>
+    <li>@Html.ActionLink("Go Back", "Index", "Staff")</li>
     
 </ul>
 }

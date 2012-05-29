@@ -186,23 +186,23 @@ namespace itmm.Models
     }
     public class itmmLiability
     {
-        [Required(ErrorMessage = "Required")]
-        [Display(Name = "Family Name")]
-        public string FamilyName { get; set; }
+        //[Required(ErrorMessage = "Required")]
+        //[Display(Name = "Family Name")]
+        //public string FamilyName { get; set; }
 
-        [Required(ErrorMessage = "Required")]
-        [Display(Name = "FirstName")]
-        public string FirstName { get; set; }
-
+        //[Required(ErrorMessage = "Required")]
+        //[Display(Name = "FirstName")]
+        //public string FirstName { get; set; }
+        string _status = "Unsettled";
 
         [Required(ErrorMessage = "Required")]
         [Display(Name = "IdNumber")]
-        public int IdNumber { get; set; }
+        public string IdNumber { get; set; }
 
 
-        [Required(ErrorMessage = "Required")]
-        [Display(Name = "Course & Year")]
-        public string Course { get; set; }
+        //[Required(ErrorMessage = "Required")]
+        //[Display(Name = "Course & Year")]
+        //public string Course { get; set; }
 
         [Required(ErrorMessage = "Required")]
         [Display(Name = "Equipment")]
@@ -210,11 +210,19 @@ namespace itmm.Models
 
         [Required(ErrorMessage = "Required")]
         [Display(Name = "Fine")]
-        public int Fine { get; set; }
+        public string Fine { get; set; }
 
         [Required(ErrorMessage = "Required")]
         [Display(Name = "Status")]
-        public string Status { get; set; }
+        public string Status { 
+            get {
+                return _status;
+            } 
+            set{
+                _status = value;
+            } 
+                
+        }
 
 
     }
@@ -242,6 +250,31 @@ namespace itmm.Models
         [Required(ErrorMessage = "Required")]
         [Display(Name = "Transaction")]
         public string Transaction { get; set; }
+
+        [Required(ErrorMessage = "Required")]
+        [Display(Name = "Cost")]
+        public int Cost { get; set; }
+
+
+    }
+
+    public class itmmStudentsToTables {
+
+        [Required(ErrorMessage = "Required")]
+        [Display(Name = "Id Numbers (Id No.1, Id No.2, etc.)")]
+        public string IdNumbers { get; set; }
+    }
+
+    public class itmmExpenses
+    {
+        [Required(ErrorMessage = "Required")]
+        [Display(Name = "Transaction")]
+        public string Transaction { get; set; }
+
+        [Required(ErrorMessage = "Required")]
+        [Display(Name = "Detail")]
+        public string Detail { get; set; }
+
 
         [Required(ErrorMessage = "Required")]
         [Display(Name = "Cost")]

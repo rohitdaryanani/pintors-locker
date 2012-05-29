@@ -46,7 +46,7 @@ body a
     text-align: right;
     color:#BDBDBD;
     display:block;
-    padding: 8px 15px 0 0;
+    padding: 11px 15px 0 0;
     font-weight: 900;
     letter-spacing: 4px;
     
@@ -118,7 +118,25 @@ height:23px;
 background-color:#E6E6E6;   
 }
 */
-
+#dispense_list
+{
+    border-top: dashed 1px gray;
+    min-width: 550px;
+}
+#dispense_list tr td
+{
+    padding: 5px 120px 5px 10px;
+    font-weight: normal;
+    border-bottom: dashed 1px gray;
+}
+#dispense_list tr:hover
+{
+    background-color:#E6E6E6; 
+}
+#d_td
+{
+    text-align: center;
+}
 /*DATA TABLES*/
 #dtable
 {
@@ -154,10 +172,43 @@ REPORT NAV
     height:0px;
 }
 
+
+
+
+
+/*******Material Quantity Warning**********/
+
+#QuantityNotification
+{
+    /*border: solid 1px black;*/
+}
+#material_gty_warning
+{
+ 
+ 
+}
+#material_gty_warning img
+{
+
+    margin: 0 auto;
+}
+
+.but a:link, .but a:visited {
+    color: #FFFFFF;
+}
+
+.but 
+{
+    text-decoration: none;
+}
+
+
+
 /*DEBUGGER CSS*/
 #content_wrapper
 {
     border: dashed 1px #E6E6E6;
     overflow:auto;
+    min-width: 900px;
     margin: 0 0 30px 0;
 }

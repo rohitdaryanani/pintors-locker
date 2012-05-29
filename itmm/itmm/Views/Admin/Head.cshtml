@@ -16,7 +16,8 @@
 
 
 <div id="content_wrapper" >
-<div id="zero_div">
+<div id="zero_div" style="border-bottom-style:none;">
+
 @using (Html.BeginForm())
 {
     <div >
@@ -96,9 +97,11 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+             <button id="button" class=" ui-button ui-state-default ui-corner-all ui-button-text-only" style="height: 30px;"> &nbsp;&nbsp;&nbsp; + Create &nbsp;&nbsp;&nbsp;</button>
+
         </p>
  </div><!--first_div-->
+   
 }
 </div><!--zero_div-->
 </div><!--content_wrapper-->
@@ -123,18 +126,21 @@
             <td>@headlist.FirstName</td>
             <td>@headlist.LastName</td>
             @{
-           pintorEntities p = new pintorEntities();
-           var x = p.Laboratories.FirstOrDefault(y => y.UserName == headlist.UserName);
-           string LabName;
-           if (x == null) { LabName = "none"; } else { LabName = x.LaboratoryName; }
+        pintorEntities p = new pintorEntities();
+        var x = p.Laboratories.FirstOrDefault(y => y.UserName == headlist.UserName);
+        string LabName;
+        if (x == null) { LabName = "none"; } else { LabName = x.LaboratoryName; }
           
              }
                   
             <td>@LabName</td>
             <td>@headlist.ContactNum</td>
             <td>@headlist.EmailAdd</td>
-            <td><a href="javascript:TableTools('@Url.Action("EditHead", "Admin", new { LabHeadId = headlist.Laboratory_HeadId })')">edit</a>                       
-        &nbsp<a href="javascript:TableConfirm('@Url.Action("DeleteHead", "Admin", new { UserName = headlist.UserName })')">delete</a>&nbsp
+
+            
+
+            <td><a href="javascript:TableTools('@Url.Action("EditHead", "Admin", new { LabHeadId = headlist.Laboratory_HeadId })')" class="but ui-state-default ui-corner-all ui-button-text-only" style="color:black;padding: 1px 1px 1px 1px;"> &nbsp; Edit &nbsp; </a>                      
+        &nbsp<a href="javascript:TableConfirm('@Url.Action("DeleteHead", "Admin", new { UserName = headlist.UserName })')" class="but ui-state-default ui-corner-all ui-button-text-only" style="color:black;padding: 1px 1px 1px 1px;"> &nbsp; Delete &nbsp; </a>&nbsp
             </td>
         </tr>
     }

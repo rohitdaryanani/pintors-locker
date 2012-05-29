@@ -70,6 +70,7 @@
     </div><!--first_div-->
 }
 </div><!--zero_div-->
+</div><!--content_wrapper-->
 @if (IncomeList.Count() != 0)
 {
 <div id="dataTable">
@@ -82,6 +83,7 @@
             <th>Course and Year</th>
             <th>Transaction</th>
             <th>Cost</th>
+            <th>Date Added</th>
             <th></th>
         </tr>
     </thead>
@@ -89,15 +91,16 @@
        @foreach (var x in IncomeList)
        { 
         <tr>
-            <td>@x.StudentInfo.IdNumber</td>
+            <td>@x.StudentInfo.StudentId</td>
             <td>@x.StudentInfo.FamiliyName</td>  
             <td>@x.StudentInfo.FirstName</td>
             <td>@x.StudentInfo.CourseAndYear</td>
             <td>@x.Transactionn</td>
-            <td>@x.cost</td>
+            <td>@x.cost</td>       
+            <td>@x.DateCreated</td>
             <td>
-            @Html.ActionLink("edit", "EditIncome", "Staff", new { IncomeId = x.IncomeId }, null)
-            @Html.ActionLink("delete", "DeleteIncome", "Staff", new { IncomeId = x.IncomeId }, null)
+            @Html.ActionLink("[Edit]", "EditIncome", "Staff", new { IncomeId = x.IncomeId }, null)
+           @* @Html.ActionLink("[Delete]", "DeleteIncome", "Staff", new { IncomeId = x.IncomeId }, null)*@
             </td>
         </tr>
        }
@@ -107,5 +110,16 @@
 
 </div><!--dataTable-->
 }
-</div><!--content_wrapper-->
 
+
+@section SideNav{
+<ul>
+  
+    <li>@Html.ActionLink("Income", "Income", "Staff", null, new { id = "light" })</li>
+    <li>@Html.ActionLink("Expenses", "Expenses", "Staff")</li>
+    <li>@Html.ActionLink("Liability", "Liability", "Staff")</li>
+    <li>@Html.ActionLink("Inventory Cost", "InventoryCost", "Staff")</li>
+    <li>@Html.ActionLink("Go Back", "Index", "Staff")</li>
+    
+</ul>
+}
